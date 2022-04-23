@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListScreenController">
+   <children>
+      <Button fx:id="backButton" layoutX="45.0" layoutY="51.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="138.0" text="&lt; Go Back" />
+      <ListView fx:id="lists" layoutX="148.0" layoutY="155.0" prefHeight="385.0" prefWidth="504.0" />
+      <Button fx:id="detailsButton" layoutX="513.0" layoutY="564.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="26.0" prefWidth="138.0" text="See Details" />
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="233.0" layoutY="77.0" prefHeight="58.0" prefWidth="285.0" text="Label">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

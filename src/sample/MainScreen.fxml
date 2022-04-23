@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainScreenController">
+   <children>
+      <TextField fx:id="findField" layoutX="256.0" layoutY="229.0" onAction="#find2" prefHeight="47.0" prefWidth="295.0" />
+      <Button fx:id="findButton" layoutX="334.0" layoutY="295.0" mnemonicParsing="false" onAction="#find2" prefHeight="26.0" prefWidth="138.0" text="Find" />
+      <Label fx:id="usernameLabel" layoutX="480.0" layoutY="645.0" prefHeight="47.0" prefWidth="295.0" text="Logged in as : ">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="573.0" layoutY="700.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="110.0" text="Log Out">
+         <effect>
+            <InnerShadow color="#e50303" />
+         </effect>
+      </Button>
+      <Label fx:id="sortLabel" layoutX="161.0" layoutY="344.0" prefHeight="26.0" prefWidth="57.0" text="Sort By:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="sortByRatingButton" layoutX="231.0" layoutY="349.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" selected="true" text="Rating" />
+      <RadioButton fx:id="sortByPopularityButton" layoutX="359.0" layoutY="348.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="132.0" text="Popularity" />
+      <RadioButton fx:id="sortByDistanceButton" layoutX="507.0" layoutY="348.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="132.0" text="Distance" />
+      <MenuButton fx:id="menuButton" layoutX="161.0" layoutY="398.0" mnemonicParsing="false" text="Price Range">
+        <items>
+          <MenuItem fx:id="m0" mnemonicParsing="false" text="None" />
+            <MenuItem fx:id="m1" mnemonicParsing="false" text="Low" />
+          <MenuItem fx:id="m2" mnemonicParsing="false" text="Medium" />
+            <MenuItem fx:id="m3" mnemonicParsing="false" text="High" />
+            <MenuItem fx:id="m4" mnemonicParsing="false" text="Very High" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="filterButton" layoutX="298.0" layoutY="398.0" mnemonicParsing="false" text="Additional Filters">
+         <items>
+            <RadioMenuItem fx:id="fm1" mnemonicParsing="false" text="Visited" />
+            <RadioMenuItem fx:id="fm2" mnemonicParsing="false" text="Not Visited" />
+            <RadioMenuItem fx:id="fm3" mnemonicParsing="false" text="Liked" />
+            <RadioMenuItem fx:id="fm4" mnemonicParsing="false" text="Listed" />
+            <RadioMenuItem fx:id="fm5" mnemonicParsing="false" text="Liked By People I Follow" />
+            <RadioMenuItem fx:id="fm6" mnemonicParsing="false" text="Wifi" />
+            <RadioMenuItem fx:id="fm7" mnemonicParsing="false" text="Takeout" />
+            <RadioMenuItem fx:id="fm8" mnemonicParsing="false" text="Delivery" />
+            <RadioMenuItem fx:id="fm9" mnemonicParsing="false" text="Outdoor Seating" />
+            <RadioMenuItem fx:id="fm10" mnemonicParsing="false" text="Reservation" />
+            <RadioMenuItem fx:id="fm11" mnemonicParsing="false" text="Credit Card" />
+            <RadioMenuItem fx:id="fm12" mnemonicParsing="false" text="Parking" />
+         </items>
+      </MenuButton>
+      <Button fx:id="restaurantButton" layoutX="264.0" layoutY="150.0" mnemonicParsing="false" onAction="#select" prefHeight="26.0" prefWidth="138.0" text="Restaurant" />
+      <Button fx:id="peopleButton" layoutX="400.0" layoutY="150.0" mnemonicParsing="false" onAction="#select" prefHeight="26.0" prefWidth="138.0" text="People" />
+      <Label fx:id="searchforLabel" alignment="CENTER_RIGHT" layoutX="108.0" layoutY="150.0" prefHeight="26.0" prefWidth="138.0" text="Search for:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="listButton" layoutX="397.0" layoutY="533.0" mnemonicParsing="false" onAction="#showList" prefHeight="26.0" prefWidth="219.0" text="See My Lists" />
+      <Button fx:id="createListButton" layoutX="121.0" layoutY="533.0" mnemonicParsing="false" onAction="#createList" prefHeight="26.0" prefWidth="219.0" text="Create A List" />
+      <MenuButton fx:id="areaButton" layoutX="457.0" layoutY="398.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Your Location">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Dhanmondi" />
+          <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Motijheel" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Basundhara" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Uttara" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Gulshan" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Mohammadpur" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="Banani" />
+            <MenuItem mnemonicParsing="false" onAction="#areaSelect" text="none" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

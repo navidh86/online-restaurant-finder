@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PeopleScreenController">
+   <children>
+      <Button fx:id="backButton" layoutX="65.0" layoutY="46.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="166.0" text="&lt; Go Back">
+         <effect>
+            <InnerShadow color="#2caf7f" />
+         </effect>
+      </Button>
+      <ListView fx:id="people" layoutX="172.0" layoutY="153.0" prefHeight="391.0" prefWidth="455.0" />
+      <Button fx:id="detailsButton" layoutX="524.0" layoutY="570.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="26.0" prefWidth="102.0" text="See Details">
+         <effect>
+            <InnerShadow color="#2caf7f" />
+         </effect>
+      </Button>
+      <Label fx:id="topLabel" alignment="CENTER" layoutX="276.0" layoutY="104.0" prefHeight="38.0" prefWidth="246.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
